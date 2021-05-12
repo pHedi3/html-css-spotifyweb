@@ -15,12 +15,18 @@ img {
     align-items: baseline;
 }
 
+.h100 {
+    height: 100%;
+}
+
 
 
 /* end utility class */
 .app {
     height: 100vh;
     color: #727479;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9px;
 }
 
 main {
@@ -30,6 +36,7 @@ main {
 footer {
     height: 90px;
     background-color: #282828;
+    padding: 15px 5px;
 }
 
 .sidebar {
@@ -54,11 +61,46 @@ footer {
 /*  ricorda di eliminare */
 
 
+
+
+
+
+
+
+/* leyout footer  */
 .song {
     border: 1px solid white;
 
 }
 
+/* leyout info song  */
+.info-song {
+    padding: 0 5px
+}
+
 .song .song-title {
     color: white;
+    font-size: 14px;
 }
+
+.song .img {
+    padding: 5px;
+}
+.song .img .row {
+    height: 100%;
+}
+
+.song .img img {
+    align-self: center;
+}
+
+.song-tipe {
+    padding-right: 2px;
+}
+
+.song .icon-cen {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* leyout player */
