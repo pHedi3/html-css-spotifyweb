@@ -1,11 +1,26 @@
 /* utility class  */
+.space-beetwen {
+    justify-content: space-between;
+}
 
+.ali-ite-cen {
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.baseline {
+    align-items: baseline;
+}
 
 
 
 /* end utility class */
 .app {
     height: 100vh;
+    color: #727479;
 }
 
 main {
@@ -35,5 +50,15 @@ footer {
 }
 
 .element {
-    height: 200vh;
+    height: 200vh; }
+/*  ricorda di eliminare */
+
+
+.song {
+    border: 1px solid white;
+
+}
+
+.song .song-title {
+    color: white;
 }
