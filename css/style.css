@@ -36,7 +36,7 @@ main {
 footer {
     height: 90px;
     background-color: #282828;
-    padding: 15px 5px;
+    padding: 15px 0;
 }
 
 .sidebar {
@@ -68,10 +68,6 @@ footer {
 
 
 /* leyout footer  */
-.song {
-    border: 1px solid white;
-
-}
 
 /* leyout info song  */
 .info-song {
@@ -104,3 +100,94 @@ footer {
 }
 
 /* leyout player */
+footer .player {
+    font-size: 14px;
+    color: white;
+}
+
+.player .botton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .botton > div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.botton .icon-big {
+    font-size: 20px;
+}
+
+.song-time .time {
+    color: white;
+    font-size: 10px;
+    flex-basis: 20px;
+    margin: 0 5px;
+}
+
+@media screen and (min-width: 576px) {
+    .song-time .time {
+        margin: 0 10px;
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .song-time .time {
+        margin: 0 15px;
+    }
+    
+}@media screen and (min-width: 992px) {
+    .song-time .time {
+        margin: 0 20px;
+    }
+    
+}
+
+.song .bar {
+    height: 5px;
+    flex-grow: 1;
+    background-color: #727479;
+    border-radius: 5px;
+}
+
+.song .bar-advance {
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+.song .volum {
+    color: white;
+    padding-right: 5px;
+}
+
+.song .volum > div {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .song .volum > div {
+        margin-right: 5px;
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .song .volum > div {
+        margin-right: 10px;
+    }
+    
+    
+}@media screen and (min-width: 992px) {
+    .song .volum > div {
+        margin-right: 15px;
+    }
+}
+.song .volum > div:last-child {
+    margin-right: 0;
+}
