@@ -1,0 +1,39 @@
+/* utility class  */
+
+
+
+
+/* end utility class */
+.app {
+    height: 100vh;
+}
+
+main {
+    height: calc(100vh - 90px);
+}
+
+footer {
+    height: 90px;
+    background-color: #282828;
+}
+
+.sidebar {
+    background-color: black;
+}
+
+.content {
+    background-color: #141922;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90px;
+    width: 100%;
+}
+
+.element {
+    height: 200vh;
+}
