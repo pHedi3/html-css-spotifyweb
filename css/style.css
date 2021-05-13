@@ -7,9 +7,6 @@
     align-items: center;
 }
 
-img {
-    width: 100%;
-}
 
 .baseline {
     align-items: baseline;
@@ -19,6 +16,15 @@ img {
     height: 100%;
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul {
+    list-style: none;
+}
 
 
 /* end utility class */
@@ -36,12 +42,18 @@ main {
 footer {
     height: 90px;
     background-color: #282828;
-    padding: 15px 0;
 }
 
 .sidebar {
     background-color: black;
+    padding: 2px;
 }
+@media screen and (min-width: 576px) {
+.sidebar {
+    padding: 10px;
+}
+ }
+
 
 .content {
     background-color: #141922;
@@ -60,11 +72,187 @@ footer {
     height: 200vh; }
 /*  ricorda di eliminare */
 
+/* leyout sidebar  */
+
+.logo, .option, .playlist, .account {
+    border: 1px solid white;
+}
+
+.logo {
+    flex-basis: 30px;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+    .logo {
+        flex-basis: 90px;
+    }
+}
+.big-logo {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    .big-logo {
+        display: block;
+
+    }
+
+    .small-logo {
+        display: none;
+    }
+
+}
+    
+.option {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.option li {
+    margin: 5px 0;
+}
+
+.option .column {
+    align-items: center;
+}
+@media screen and (min-width: 576px) {
+    .option .column {
+        align-items: flex-start;
+    }
+}
+
+
+.option svg {
+    height: 24px;
+    vertical-align: middle;
+}
+
+
+@media screen and (min-width: 576px) {
+    .option svg {
+        height: 24px;
+    }
+}
+
+.option svg path {
+  fill: #727479 ;;
+}
+
+.option .principal svg path {
+    fill: white;
+}
 
 
 
+.option .text {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    
+    .option .text {
+        display: inline-block;
+        line-height: 24px;
+    }
+
+    .option li:first-of-type .text {
+        color: white;
+    }
+}
+
+.playlist {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-y: auto;
+}
+
+.playlist h3, .playlist ul {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    .playlist h3, .playlist ul {
+        display: block;
+    }
+}
+
+.playlist h3 {
+    font-size: 20px;
+    color: white;
+}
+.playlist li {
+    margin: 2px 0;
+}
+
+.playlist ul  li:first-child i {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.playlist .text, .playlist .text-special {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.playlist .text-special {
+    line-height: 30px;
+}
 
 
+.instal {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.profile {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.instal svg {
+    height: 9px;
+    vertical-align: middle;
+}
+
+.account .text {
+    display: none;
+    text-align: center;
+}
+@media screen and (min-width: 576px) {
+    .instal, .profile {
+        text-align: left;
+    }
+
+    .instal .text {
+        display: inline-block;
+        font-size: 9px;
+        line-height: 9px;
+    }
+
+    .profile .text {
+        vertical-align: middle;
+        display: inline-block;
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+.profile svg {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.profile .back {
+    display: inline-block;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 5px;
+}
 
 
 /* leyout footer  */
@@ -81,9 +269,18 @@ footer {
 
 .song .img {
     padding: 5px;
+    display: flex;
+    align-items: center;
 }
-.song .img .row {
-    height: 100%;
+.song .img img {
+    height: 30px;
+}
+
+@media screen and (min-width: 576px) {
+    .song .img img {
+        height: 60px;
+    }
+    
 }
 
 .song .img img {
