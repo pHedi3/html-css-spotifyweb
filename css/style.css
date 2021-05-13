@@ -138,9 +138,10 @@ footer {
 
 
 .option svg {
-    height: 24px;
+    height: 20px;
     vertical-align: middle;
 }
+
 
 
 @media screen and (min-width: 576px) {
@@ -158,9 +159,9 @@ footer {
 }
 
 
-
 .option .text {
     display: none;
+    vertical-align: middle;
 }
 
 @media screen and (min-width: 576px) {
@@ -213,6 +214,7 @@ footer {
 
 .playlist .text-special {
     line-height: 30px;
+    margin-left: 10px;
 }
 
 .account {
@@ -238,8 +240,13 @@ footer {
 }
 
 .instal svg {
-    height: 9px;
+    height: 18px;
     vertical-align: middle;
+    margin-right: 5px;
+}
+
+.instal svg path {
+    fill: #727479;
 }
 
 .account .text {
@@ -252,9 +259,10 @@ footer {
     }
 
     .instal .text {
+        vertical-align: middle;
         display: inline-block;
-        font-size: 9px;
-        line-height: 9px;
+        font-size: 10px;
+        line-height: 18spx;
     }
 
     .profile .text {
@@ -263,6 +271,7 @@ footer {
         color: white;
         font-size: 14px;
         line-height: 20px;
+        margin-left: 10px;
     }
 
 }
@@ -289,7 +298,7 @@ footer {
     align-items: center;
 }
 
-.botton:hover {
+.header .botton:hover {
     font-size: 20px;
 }
 
@@ -336,8 +345,10 @@ section .disco {
     padding: 5px;
 }
 
-.disco .img {
+section .disco .img {
     position: relative;
+    width: 100%;
+
 }
 
 .disco img {
@@ -346,17 +357,22 @@ section .disco {
 }
 
 .disco .play {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50% , -50%);
     color: white;
-    transform: translate(-50%,-50%);
     font-size: 30px;
 
 }
 
-.img:hover{
+.img:hover .back{
    opacity: 0.2;
+}
+
+.img:hover .play {
+    display: block;
 }
 
 
@@ -416,6 +432,7 @@ section:last-of-type .disco img {
 footer .player {
     font-size: 14px;
     color: white;
+    margin-bottom: 5px;
 }
 
 .player .botton {
@@ -431,6 +448,7 @@ footer .player {
 
 .botton .icon-big {
     font-size: 20px;
+    margin: 0 15px;
 }
 
 .song-time .time {
@@ -468,9 +486,26 @@ footer .player {
 .song .bar-advance {
     height: 5px;
     background-color: white;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
+.song-time .botton, .volum .botton {
+    margin-top: -3px;
+    display: none;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.song-time:hover .bar-advance{
+    background-color: greenyellow;
+}
+
+.song-time:hover .botton {
+    display: inline-block;
+}
 
 
 .song .volum {
@@ -503,4 +538,12 @@ footer .player {
 }
 .song .volum > div:last-child {
     margin-right: 0;
+}
+
+.volum .bar:hover .bar-advance{
+    background-color: greenyellow;
+}
+
+.volum .bar:hover .botton {
+    display: inline-block;
 }
