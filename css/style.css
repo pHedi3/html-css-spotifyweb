@@ -30,6 +30,18 @@ ul {
     justify-content: center;
 }
 
+.text:hover {
+    color: white;
+}
+
+.text-special:hover {
+    color: white;
+}
+
+i:hover {
+    color: white;
+}
+
 /* end utility class */
 .app {
     height: 100vh;
@@ -70,11 +82,9 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     height: 90px;
     width: 100%;
+    z-index: 1000;
 }
 
-.element {
-    height: 200vh; }
-/*  ricorda di eliminare */
 
 /* leyout sidebar  */
 
@@ -166,15 +176,11 @@ footer {
 }
 
 .playlist {
-    flex-basis: 100px;
+    flex-basis: 80px;
     flex-grow: 1;
     flex-shrink: 1;
-    overflow: auto;
+    overflow-y: scroll;
     min-height: 100px;
-}
-
-.playlist ul {
-    height: 100%;
 }
 
 .playlist h3, .playlist ul {
@@ -192,7 +198,7 @@ footer {
     color: white;
 }
 .playlist li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .playlist ul  li:first-child i {
@@ -283,6 +289,10 @@ footer {
     align-items: center;
 }
 
+.botton:hover {
+    font-size: 20px;
+}
+
 .header .botton {
     border: 2px solid white ;
     border-radius: 10px;
@@ -305,16 +315,41 @@ footer {
     padding: 10px;
 }
 
+
 .element section h1 {
     color: white;
     font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.element section:first-of-type h1 {
+    margin-bottom: 20px;
+}
+
+.element section h4 {
+    font-size: 9;
+    margin-bottom: 20px;
 }
 
 section .disco {
-    height: 100px;
-    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
 }
 
+.disco img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.disco h2 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+section:last-of-type .disco img {
+    border-radius: 50%;
+}
 
 
 /* leyout footer  */
