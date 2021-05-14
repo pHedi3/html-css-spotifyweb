@@ -60,11 +60,13 @@ main {
 footer {
     height: 90px;
     background-color: #282828;
+    z-index: 1002;
 }
 
 .sidebar {
     background-color: black;
     padding: 3px;
+    height: calc(100vh - 90px);
 }
 @media screen and (min-width: 576px) {
 .sidebar {
@@ -240,6 +242,19 @@ footer {
 
 }
 
+
+.account {
+    display: none;
+}
+
+@media screen and (min-height: 510px) {
+    .account {
+        display: block;
+    }
+
+}
+
+
 .instal {
     padding: 10px 0;
     border-bottom: 1px solid white;
@@ -255,6 +270,7 @@ footer {
     height: 18px;
     vertical-align: middle;
     margin-right: 5px;
+    z-index: 1;
 }
 
 .instal svg path {
@@ -274,7 +290,8 @@ footer {
         vertical-align: middle;
         display: inline-block;
         font-size: 10px;
-        line-height: 18spx;
+        line-height: 18px;
+        z-index: 1;
     }
 
     .profile .text {
@@ -284,6 +301,7 @@ footer {
         font-size: 14px;
         line-height: 20px;
         margin-left: 10px;
+        z-index: 1;
     }
 
 }
@@ -291,6 +309,7 @@ footer {
 .profile svg {
     height: 20px;
     vertical-align: middle;
+    z-index: 1;
 }
 
 .profile .back {
@@ -416,6 +435,9 @@ section:last-of-type .disco img {
 
 
 /* leyout footer  */
+footer .row {
+    z-index: 1002;
+}
 
 /* leyout info song  */
 .info-song {
