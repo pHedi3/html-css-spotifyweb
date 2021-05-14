@@ -32,14 +32,17 @@ ul {
 
 .text:hover {
     color: white;
+    cursor: pointer;
 }
 
 .text-special:hover {
     color: white;
+    cursor: pointer;
 }
 
 footer i:hover {
     color: white;
+    cursor: pointer;
 }
 
 /* end utility class */
@@ -127,6 +130,7 @@ footer {
 
 .option li {
     margin: 5px 0;
+    padding: 0 10px;
 }
 
 .option .column {
@@ -173,8 +177,9 @@ footer {
         line-height: 24px;
     }
 
-    .option li:first-of-type .text {
+    .option li:first-of-type {
         color: white;
+        border-left: 2px solid greenyellow;
     }
 }
 
@@ -184,6 +189,7 @@ footer {
     flex-shrink: 1;
     overflow-y: auto;
     min-height: 100px;
+    padding: 0 10px;
 }
 
 .playlist h3, .playlist ul {
@@ -224,12 +230,12 @@ footer {
 }
 
 .account {
-    display: none;
+    padding: 0px;
 }
 
-@media screen and (min-height: 510px) {
+@media screen and (min-width: 576px) {
     .account {
-        display: block;
+        padding: 10px;
     }
 
 }
@@ -306,6 +312,7 @@ footer {
 
 .header .botton:hover {
     font-size: 20px;
+    cursor: pointer;
 }
 
 .header .botton {
@@ -327,9 +334,21 @@ footer {
 
 .element nav .text {
     text-align: center;
-    padding: 10px;
+    margin-bottom: 10px;
+    padding-bottom:  5px;
     font-weight: 1000;
-    font-size: 10px;
+    font-size: 9px;
+}
+@media screen and (min-width:992px) {
+    .element nav .text {
+        font-size: 12px;
+    }
+    
+}
+
+
+.element nav div:first-of-type {
+    border-bottom: 2px solid greenyellow;
 }
 
 
@@ -377,6 +396,7 @@ section .disco .img {
 
 .img:hover .back{
    opacity: 0.2;
+   cursor: pointer;
 }
 
 .img:hover .play {
@@ -399,7 +419,6 @@ section:last-of-type .disco img {
 
 /* leyout info song  */
 .info-song {
-    padding: 0 5px
 }
 
 .info-song:hover .song-tipe {
@@ -412,17 +431,17 @@ section:last-of-type .disco img {
 }
 
 .song .img {
-    padding: 5px;
+    padding: 10px;
     display: flex;
     align-items: center;
 }
 .song .img img {
-    height: 30px;
+    height: 35px;
 }
 
 @media screen and (min-width: 576px) {
     .song .img img {
-        height: 60px;
+        height: 50px;
     }
     
 }
@@ -431,9 +450,6 @@ section:last-of-type .disco img {
     align-self: center;
 }
 
-.song-tipe {
-    padding-right: 2px;
-}
 
 .song .icon-cen {
     font-size: 14px;
@@ -516,6 +532,7 @@ footer .player {
 
 .song-time:hover .bar-advance{
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .song-time:hover .botton {
@@ -559,8 +576,10 @@ footer .player {
 
 .volum .bar:hover .bar-advance{
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .volum .bar:hover .botton {
     display: inline-block;
+ 
 }
