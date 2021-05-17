@@ -19,7 +19,6 @@
 .column {
     display: flex;
     flex-direction: column;
-
 }
 
 ul {
@@ -49,7 +48,7 @@ footer i:hover {
 .app {
     height: 100vh;
     color: #727479;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', serif;
     font-size: 9px;
 }
 
@@ -58,21 +57,20 @@ main {
 }
 
 footer {
+    position: relative;
     height: 90px;
+    min-height: 90px;
+    max-height: 90px;
     background-color: #282828;
     z-index: 1002;
 }
 
 .sidebar {
     background-color: black;
-    padding: 3px;
     height: calc(100vh - 90px);
+    overflow: hidden;
 }
-@media screen and (min-width: 576px) {
-.sidebar {
-    padding: 0;
-}
- }
+
 
 .content {
     background-color: #141922;
@@ -93,10 +91,10 @@ footer {
 /* leyout sidebar  */
 
 .logo {
-    min-height: 30px;
     flex-basis: 30px;
     display: flex;
     align-items: center;
+    padding: 3px;
 }
 
 @media screen and (min-width: 576px) {
@@ -126,6 +124,7 @@ footer {
     min-height: 125px;
     font-size: 14px;
     padding: 10px 0;
+    font-weight: 500;
 }
 
 
@@ -192,6 +191,7 @@ footer {
     overflow-y: auto;
     min-height: 100px;
     padding: 0 10px;
+    font-weight: 500;
 }
 
 .playlist h3, .playlist ul {
@@ -238,18 +238,6 @@ footer {
 @media screen and (min-width: 576px) {
     .account {
         padding: 10px;
-    }
-
-}
-
-
-.account {
-    display: none;
-}
-
-@media screen and (min-height: 510px) {
-    .account {
-        display: block;
     }
 
 }
@@ -322,6 +310,7 @@ footer {
 /* leyout header  */
 .header {
     font-size: 16px;
+    font-weight: 500;
     color: white;
     padding-right: 30px;
     display: flex;
@@ -351,23 +340,34 @@ footer {
 
 }
 
-.element nav .text {
+.element nav .text, .element nav .text-special {
     text-align: center;
     margin-bottom: 10px;
     padding-bottom:  5px;
-    font-weight: 1000;
+    font-weight: 700;
     font-size: 9px;
 }
 @media screen and (min-width:992px) {
-    .element nav .text {
+    .element nav .text, .element nav .text-special {
         font-size: 12px;
     }
     
 }
 
+.element nav .text-special {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.element nav div:first-of-type {
-    border-bottom: 2px solid greenyellow;
+.element nav .text-special::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: greenyellow;
+    text-align: center;
+
 }
 
 
@@ -375,6 +375,7 @@ footer {
     color: white;
     font-size: 20px;
     margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .element section:first-of-type h1 {
@@ -407,18 +408,18 @@ section .disco .img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%,-50%);
     color: white;
-    font-size: 30px;
+    font-size: 50px;
 
 }
 
-.img:hover .back{
+.disco:hover .back{
    opacity: 0.2;
    cursor: pointer;
 }
 
-.img:hover .play {
+.disco:hover .play {
     display: block;
 }
 
@@ -447,9 +448,14 @@ footer .row {
     color: #fff ;
 }
 
+.song .song-tipe {
+    font-weight: 500;
+}
+
 .song .song-title {
     color: white;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .song .img {
